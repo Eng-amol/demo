@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box ;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color: #0099ff;
+}
+header{
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 2px var(--main-color);
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    z-index: 10;
+    background-color: white;
+}
+header li:hover,header i:hover,header h1:hover{
+    cursor: pointer;
+}
+header i:hover{
+    cursor: pointer;
+}
+header div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header:first-child h1{
+    font-size: 30px;
+}
+header:first-child i{
+    font-size: 40px;
+    margin-right: 20px;
+    color: var(--main-color);
+}
+header .category-div ul{
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+}
+header .category-div .list[state="open"] i{
+    transform: rotate(180deg);
+}
+header .category-div i{
+    color: black;
+    font-size: 13px;
+    margin-left: 5px;
+    transition-duration: .5s;
+}
+header div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+header div:last-child ul{
+    list-style: none;
+    display: flex;
+}
+header div:last-child ul li{
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+header div:last-child ul li a{
+    text-decoration: none;
+    color: black;
+}
+header div:last-child ul .login{
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+header div:last-child ul .login a{
+    color: white;
+}
+header div:last-child .cart{
+    font-size: 25px;
+    position: relative;
+    transition-duration: .5s;
+}
+header div:last-child .cart:hover{
+    transform: scale(1.1);
+}
+header div:last-child .cart::after{
+    content: "0";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: aqua;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -7px;
+    top: -7px;
+    border-radius: 15px;
+}
+
+
+/* section */
+#intro-section{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 63px);
+    top: 63px;
+    display: flex;
+    overflow: hidden;
+}
+#intro-section .store-image{
+    width: 50%;
+}
+#intro-section .store-image img{
+    width: 100%;
+    height: 100%;
+}
+#intro-section .store-intro{
+    width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+#intro-section .store-intro div{
+    width: 80%;
+    margin-top: 20%;
+}
+#intro-section .store-intro div h1{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px black;
+}
+#intro-section .store-intro div p{
+    line-height: 40px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#intro-section .store-intro div .explor-button{
+    /* margin-top: 10px; */
+    background-color: var(--main-color);
+    padding: 13px 15px ;
+    color:  white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px #eee;
+    transition-duration: .5s;
+}
+#intro-section .store-intro div .explor-button i{
+    margin-left: 10px;
+    transition-duration: 1s;
+}
+#intro-section .store-intro div .explor-button:hover{
+    cursor: pointer;
+}
+#intro-section .store-intro div .explor-button:hover i{
+    cursor: pointer;
+    transform: translateX(10px);
+}
+/* books section section */
+#books-section{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 100%;
+}
+#books-section .search-box{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#books-section .search-box #searchLabal {
+    border: 2px solid #666;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    font-size: 25px;
+    position: relative;
+}
+#books-section .search-box #searchLabal input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+#searchLabal input::placeholder{
+    text-transform: capitalize;
+}
+#books-section .search-box #searchLabal i{
+    margin-right: 10px;
+}
+#books-section .search-box #searchLabal select{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    text-transform: capitalize;
+    border: 2px solid #666;
+    border-radius: 5px;
+    left: 80%;
+    outline: none;
+    font-size: 17px;
+    font-weight: bold;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
